@@ -2,7 +2,7 @@
 Student information for this assignment:
 
 Replace <FULL NAME> with your name.
-On my/our honor, Cesar Dao Corado and Vinay Devarakonda, this
+On my/our honor, <Cesar Dao Corado> and <Vinay Devarakonda>, this
 programming assignment is my own work and I have not provided this code to
 any other student.
 
@@ -194,8 +194,8 @@ class LinkedList:
 
 def main():
     # read data from stdin (terminal/file) using input() and create polynomial p
-    n_terms = int(input())
     p = LinkedList()
+    n_terms = int(input())
     for _ in range(n_terms):
         line = input().strip().split()
         coeff = int(line[0])
@@ -217,8 +217,6 @@ def main():
     # get sum of p and q as a new linked list and print sum
     pq_sum = p.add(q)
     print(pq_sum)
-
-
 
     # get product of p and q as a new linked list and print product
     product = p.mult(q)
