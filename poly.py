@@ -124,7 +124,7 @@ class LinkedList:
             while current_term and current_term.exp >= exp:
                 if current_term.exp == exp:
                     current_term.coeff += coeff
-                    if current_term.coeff ==0:
+                    if current_term.coeff == 0:
                         if previous_term:
                             previous_term.next = current_term.next
                         else:
@@ -196,7 +196,6 @@ def main():
     # read data from stdin (terminal/file) using input() and create polynomial p
     n_terms = int(input())
     p = LinkedList()
-    n_terms = int(input())
     for _ in range(n_terms):
         line = input().strip().split()
         coeff = int(line[0])
