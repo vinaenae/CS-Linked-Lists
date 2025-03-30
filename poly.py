@@ -194,37 +194,34 @@ class LinkedList:
 
 def main():
     # read data from stdin (terminal/file) using input() and create polynomial p
-    p = LinkedList()
     n_terms = int(input())
+    p = LinkedList()
     for _ in range(n_terms):
         line = input().strip().split()
         coeff = int(line[0])
         exp = int(line[1])
         p.insert_term(coeff, exp)
-    while True:
-        line = input()
-        if line.strip() == "":
-            break
+    
+    line = input()
 
     # read data from stdin (terminal/file) using input() and create polynomial q
-    q = LinkedList()
     n_terms_2 = int(input())
+    q = LinkedList()
     for _ in range(n_terms_2):
         line = input().strip().split()
         coeff = int(line[0])
         exp = int(line[1])
         q.insert_term(coeff, exp)
+        
     # get sum of p and q as a new linked list and print sum
     pq_sum = p.add(q)
     print(pq_sum)
 
+
+
     # get product of p and q as a new linked list and print product
     product = p.mult(q)
     print(product)
-
-
-if __name__ == "__main__":
-    main()
 
 
 if __name__ == "__main__":
